@@ -1,0 +1,9 @@
+{
+  "expo": {
+    "sdkVersion": "29.0.0",
+    "name": "FoodSpaze",
+    "slug": "FoodSpaze",
+    "icon": "src/images/app-icon.png",
+    "privacy": "public"
+  }
+}
