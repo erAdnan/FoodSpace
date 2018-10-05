@@ -4,6 +4,12 @@
     "name": "FoodSpaze",
     "slug": "FoodSpaze",
     "icon": "src/images/app-icon.png",
-    "privacy": "public"
+    "privacy": "public",
+    "ios": {
+      "bundleIdentifier": "com.foodspaze"
+    },
+    "android": {
+      "package": "com.foodspaze"
+    }
   }
 }
