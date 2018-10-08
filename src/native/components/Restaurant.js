@@ -22,11 +22,15 @@ const RestaurantView = ({
   }
   // restaurant not found
   if (!restaurant) return <Error content={ErrorMessages.error404} />;
-  const keyExtractor = item => item.id;
+  const keyExtractor = item => (item.id ? item.id.toString() : '1');
   return (
     <Container>
       <Content padder>
-        <Image source={{ uri: restaurant.image_url }} style={{ height: 200, width: null, flex: 1 }} />
+        <Image
+          source={{ uri: restaurant.image_url ? restaurant.image_url : 'http://samen.salamsch.com/mschool/wp-content/uploads/2018/06/16386.png' }}
+          style={{ height: 200, width: null, flex: 1 }}
+          onError={() => { restaurant.image_url = 'http://samen.salamsch.com/mschool/wp-content/uploads/2018/06/16386.png'; }}
+        />
 
         <Spacer size={25} />
         <H3>
